@@ -1,0 +1,219 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #add8e6;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+ul {
+    margin: 12px 0px;
+    padding: 0px 35px;
+}
+
+#gameMessage {
+    margin-bottom: 5px;
+}
+
+#wordInBrackets {
+    margin-top: 0px;
+}
+
+.cfg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.settings {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+#rulesButton {
+    padding: 5px 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 25px;
+    background: linear-gradient(135deg, #a6ecff, #58a7bb);
+    background-color: #6fd0e6;
+    box-shadow: 0 0 12px rgba(88, 167, 187, 0.7);
+    border-radius: 10px;
+}
+
+#rulesButton:hover {
+    transform: scale(1.03);
+    background: #7bd9ed;
+    cursor: pointer;
+}
+
+#rules {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: brightness(0.6);
+}
+
+#rulesContainer {
+    position: absolute;
+    justify-self: center;
+    justify-content: left;
+    z-index: 1;
+    margin: auto;
+    top: 19%;
+    width: 55%;
+    height: 53%;
+    padding-right: 8px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #dcf6ff;
+    border: 7px outset #2879c5;
+    border-radius: 10px;
+}
+
+#importantRule {
+    margin: 10px 0px;
+    color: #af0000;
+}
+
+#cross {
+    cursor: pointer;
+    float: right;
+}
+
+#rulesText li {
+    margin: 10px 0px;
+}
+
+.controls {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.controls button {
+    background-color: #58a7bb;
+    text-align: center;
+    width: 50px;
+    font-size: 20px;
+    border: #2c2c2c;
+    border-style: outset;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 6px 4px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+#triesCount {
+    margin-top: 60px;
+}
+
+#minTries {
+    margin-top: 5px;
+}
+
+.numberInput {
+    font-size: 30px;
+    height: 30px;
+    text-align: center;
+    max-width: 70px;
+    border-radius: 10px;
+    background-color: #e3f9ff;
+}
+
+#settingsButton {
+    margin: 23px auto;
+    margin-bottom: 0px;
+    padding: 5px 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #a6ecff;
+    box-shadow: 6px 4px 8px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#start {
+    background-color: #53cc53;
+    text-align: center;
+    color: #000000;
+    font-family: cursive;
+    padding: 7px 10px;
+    font-size: 40px;
+    border: #000000;
+    border-style: ridge;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 40px;
+    box-shadow: 8px 6px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game {
+    display: none;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cfgInGame {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#tryfield {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#submitButton {
+    height: 35px;
+    font-size: 23px;
+    background-color: #53cc53;
+    border-radius: 20px;
+}
+
+.resOptions {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 25px;
+    font-weight: 600;
+}
