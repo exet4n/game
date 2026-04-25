@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet"  href="../styles/game.css">
+		<script src="../scripts/game.js"></script>
+		<title>Größer Kleiner</title>
+	</head>
+
+    <body onload="decimalNums()">
+
+    <h1>Größer Kleiner</h1>
+
+    
+    <div id="inputs" class="cfg">
+        <div>
+            <button id="rulesButton" onclick="rules()">ⓘ   Regeln</button>
+            <div id="rules" style="display: none;">
+                <div id="rulesContainer">
+                    <span id="cross" onclick="rules()">&#10008;</span>
+                    <ul id="rulesText">
+                        <li>Der Benutzer gibt eine Zahlenmenge und die Anzahl der Versuche ein<br><p id="importantRule">!!! Zahlenmenge muss größer oder gleich 10 sein !!!</p></li>
+                        <li>Danach generiert der Computer eine Randomzahl in dieser Zahlenmenge</li>
+                        <li>Der Benutzer muss erraten, welche Zahl der Computer sich ausgedacht hat</li>
+                        <li>Nach jedem Versuch gibt der Computer an, ob die richtige Zahl größer &#129029; oder kleiner &#129031; ist</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    <div class="settings">
+
+    <h3>Maximale Zahl</h3>
+        <div class="controls">
+            <button onclick="stepMaxNumber(-10)">-10</button>
+            <input id="maxNumber" class="numberInput" type="number" step="1">
+            <button onclick="stepMaxNumber(10)">+10</button>
+        </div>
+
+    <h3 id="triesCount">Anzahl der Versuche</h3>
+        <div class="controls">
+            <button onclick="stepMaxTries(-1)">-</button>
+            <input id="maxTries" class="numberInput" type="number" min="2" step="1">
+            <button onclick="stepMaxTries(1)">+</button>
+        </div>
+        <span id="minTries"><b>min. 2</b></span>
+
+        <button id="settingsButton" onclick="optionalSettings(this)">Optionale Einstellungen</button>
+        <div id="optionalSettings" style="display: none;">
+            <h3>Minimale Zahl</h3>
+                <div class="controls">
+                    <button onclick="stepMinNumber(-10)">-10</button>
+                    <input id="minNumber" class="numberInput" type="number" step="1">
+                    <button onclick="stepMinNumber(10)">+10</button>
+                </div>
+        </div>
+    </div>
+
+    <button id="start" onclick="start()">START</button>
+    </div>
+
+    <div class="game">
+        <div class="cfgInGame">
+            <h2 id="gameMessage">Eine Zahl zwischen <span id="minNumBetween"></span> und <span id="maxNumBetween"></span></h2>
+            <h2 id="wordInBrackets">(einschließlich)</h2>
+            <h2>Versuche übrig: <span id="tries"></span></h2>
+        </div>
+
+        <div class="guessHUD">
+            <input id="tryField" class="numberInput" type="number" min="1" onkeyup="tryField(event)">
+            <!-- <button id="submitButton" onclick="submitButton(event)">&#x2713;</button> -->
+        </div>
+
+        <div class="resOptions"></div>
+        <p id="compare"></p>
+    </div>
+    </body>
+</html>
